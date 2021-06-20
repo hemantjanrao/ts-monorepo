@@ -10,10 +10,16 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-lerna-scopes": "^12.1.4",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
+    "commitlint": "^12.1.4",
     "eslint": "^7.28.0",
+    "husky": "^6.0.0",
     "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
     "rimraf": "^3.0.2"
   },
   "scripts": {
@@ -24,5 +30,10 @@
   },
   "scripty": {
     "path": "./scripts/workspace"
+  }, 
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
