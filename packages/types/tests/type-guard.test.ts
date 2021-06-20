@@ -70,6 +70,7 @@ describe("isTeam() tests", function () {
 describe("isTypedArray() tests", function () {
   test("non-array", () => {
     expect(
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       isTypedArray(null, () => true)
     ).toEqual(false);
